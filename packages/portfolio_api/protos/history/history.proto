@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package portfolio;
+
+// Represents a single data point in the portfolio history graph
+message HistoryPoint {
+  int64 timestamp = 1; // Unix timestamp seconds
+  double value = 2;
+}
+

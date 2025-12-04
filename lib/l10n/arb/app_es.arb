@@ -1,0 +1,14 @@
+{
+    "@@locale": "es",
+    "appTitle": "Portafolio Financiero",
+    "totalBalance": "Balance Total",
+    "performance": "Rendimiento",
+    "assets": "Activos",
+    "retry": "Reintentar",
+    "errorMessage": "Error: {error}",
+    "noHistoryData": "No hay datos históricos disponibles",
+    "chartPlaceholder": "Gráfico Próximamente",
+    "themeSystem": "Sistema",
+    "themeLight": "Banca Retail",
+    "themeDark": "Neobanco"
+}

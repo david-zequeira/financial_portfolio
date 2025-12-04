@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package portfolio;
+
+import "asset/asset.proto";
+import "history/history.proto";
+
+service PortfolioService {
+  rpc GetPortfolio (Empty) returns (stream PortfolioResponse);
+}
+
+message Empty {}
+
+message PortfolioResponse {
+  repeated Asset assets = 1;
+  repeated HistoryPoint history = 2;
+  double total_balance = 3;
+}

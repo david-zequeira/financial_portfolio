@@ -1,0 +1,24 @@
+{
+    "@@locale": "en",
+    "appTitle": "Financial Portfolio",
+    "@appTitle": {
+        "description": "Text shown in the AppBar of the Portfolio Page"
+    },
+    "totalBalance": "Total Balance",
+    "performance": "Performance",
+    "assets": "Assets",
+    "retry": "Retry",
+    "errorMessage": "Error: {error}",
+    "@errorMessage": {
+        "placeholders": {
+            "error": {
+                "type": "String"
+            }
+        }
+    },
+    "noHistoryData": "No history data available",
+    "chartPlaceholder": "Chart Coming Soon",
+    "themeSystem": "System",
+    "themeLight": "Retail",
+    "themeDark": "Neobank"
+}

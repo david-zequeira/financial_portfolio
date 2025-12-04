@@ -1,0 +1,41 @@
+name: financial_portfolio
+description: Financial Portfolio App
+version: 1.0.0+1
+publish_to: none
+
+environment:
+  sdk: ^3.9.0
+  flutter: ^3.35.0
+
+dependencies:
+  app_ui:
+    path: packages/app_ui
+  bloc: ^9.0.1
+  equatable: ^2.0.7
+  fl_chart: ^1.1.1
+  flutter:
+    sdk: flutter
+  flutter_bloc: ^9.1.1
+  flutter_localizations:
+    sdk: flutter
+  freezed_annotation: ^2.4.1
+  hydrated_bloc: ^10.1.1
+  intl: ^0.20.2
+  path_provider: ^2.1.5
+  portfolio_api:
+    path: packages/portfolio_api
+  portfolio_repository:
+    path: packages/portfolio_repository
+
+dev_dependencies:
+  bloc_test: ^10.0.0
+  build_runner: ^2.4.8
+  flutter_test:
+    sdk: flutter
+  freezed: ^2.4.7
+  mocktail: ^1.0.4
+  very_good_analysis: ^10.0.0
+
+flutter:
+  generate: true
+  uses-material-design: true

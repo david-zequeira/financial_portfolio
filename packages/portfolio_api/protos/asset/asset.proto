@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package portfolio;
+
+// Represents a financial asset (Stock, ETF, Crypto, etc.)
+message Asset {
+  string id = 1;
+  string name = 2;
+  string symbol = 3;
+  double price = 4;
+  double change_percent = 5; 
+  AssetType type = 6;
+}
+
+// Types of assets supported
+enum AssetType {
+  ASSET_TYPE_UNSPECIFIED = 0;
+  ASSET_TYPE_STOCK = 1;
+  ASSET_TYPE_ETF = 2;
+  ASSET_TYPE_CRYPTO = 3;
+}
+
