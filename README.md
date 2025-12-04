@@ -4,46 +4,46 @@
 [![style: very good analysis][very_good_analysis_badge]][very_good_analysis_link]
 [![License: MIT][license_badge]][license_link]
 
-Financial Portfolio App - Una aplicación para visualizar y gestionar portafolios de inversión.
+Financial Portfolio App - An application to visualize and manage investment portfolios.
 
 ---
 
-## Requisitos Previos 📋
+## Prerequisites 📋
 
-Antes de ejecutar la aplicación, asegúrate de tener instalado:
+Before running the application, make sure you have the following installed:
 
-| Herramienta | Versión Mínima | Verificar Instalación |
-|-------------|----------------|----------------------|
+| Tool | Minimum Version | Verify Installation |
+|------|----------------|---------------------|
 | Flutter | 3.35.0+ | `flutter --version` |
 | Dart | 3.9.0+ | `dart --version` |
-| CocoaPods (macOS/iOS) | Última | `pod --version` |
+| CocoaPods (macOS/iOS) | Latest | `pod --version` |
 | Xcode (macOS/iOS) | 15.0+ | `xcodebuild -version` |
 | Android Studio (Android) | Flamingo+ | - |
 
 ---
 
-## Instalación 🔧
+## Installation 🔧
 
-### 1. Clonar el repositorio
+### 1. Clone the repository
 
 ```sh
 git clone <repository-url>
 cd financial_portfolio
 ```
 
-### 2. Instalar dependencias de Flutter
+### 2. Install Flutter dependencies
 
 ```sh
 flutter pub get
 ```
 
-### 3. Generar código (freezed, l10n, etc.)
+### 3. Generate code (freezed, l10n, etc.)
 
 ```sh
 dart run build_runner build --delete-conflicting-outputs
 ```
 
-### 4. Configuración específica por plataforma
+### 4. Platform-specific configuration
 
 #### iOS
 
@@ -63,15 +63,15 @@ cd ..
 
 ---
 
-## Ejecutar la Aplicación 🚀
+## Running the Application 🚀
 
-Este proyecto contiene 3 flavors:
+This project contains 3 flavors:
 
-- **development** - Entorno de desarrollo
-- **staging** - Entorno de pruebas
-- **production** - Entorno de producción
+- **development** - Development environment
+- **staging** - Testing environment
+- **production** - Production environment
 
-### Comandos de ejecución
+### Run commands
 
 ```sh
 # Development
@@ -84,26 +84,26 @@ flutter run --flavor staging --target lib/main/main_staging.dart
 flutter run --flavor production --target lib/main/main_production.dart
 ```
 
-### Ejecutar en dispositivo específico
+### Run on specific device
 
 ```sh
-# Listar dispositivos disponibles
+# List available devices
 flutter devices
 
-# Ejecutar en un dispositivo específico
+# Run on a specific device
 flutter run -d <device_id> --flavor development --target lib/main/main_development.dart
 ```
 
-### Usando VSCode/Android Studio
+### Using VSCode/Android Studio
 
-También puedes usar las configuraciones de lanzamiento preconfiguradas en `.idea/runConfigurations/` o `.vscode/launch.json`.
+You can also use the pre-configured launch configurations in `.idea/runConfigurations/` or `.vscode/launch.json`.
 
 ---
 
-## Plataformas Soportadas 📱
+## Supported Platforms 📱
 
-| Plataforma | Soportada |
-|------------|-----------|
+| Platform | Supported |
+|----------|-----------|
 | iOS | ✅ |
 | Android | ✅ |
 | Web | ✅ |
@@ -112,79 +112,79 @@ También puedes usar las configuraciones de lanzamiento preconfiguradas en `.ide
 
 ---
 
-## Arquitectura del Proyecto 🏗️
+## Project Architecture 🏗️
 
-El proyecto sigue **Clean Architecture** con enfoque **feature-first**:
+The project follows **Clean Architecture** with a **feature-first** approach:
 
 ```
 lib/
-├── app/                    # Configuración de la app
-├── l10n/                   # Internacionalización
-├── main/                   # Entry points por flavor
+├── app/                    # App configuration
+├── l10n/                   # Internationalization
+├── main/                   # Entry points per flavor
 ├── portfolio/              # Feature: Portfolio
 │   ├── bloc/               # State management
-│   ├── view/               # Páginas
-│   └── widgets/            # Widgets específicos
-└── theme_selector/         # Feature: Selector de tema
+│   ├── view/               # Pages
+│   └── widgets/            # Feature-specific widgets
+└── theme_selector/         # Feature: Theme selector
 
 packages/
-├── app_ui/                 # Design system y componentes UI
-├── portfolio_api/          # Capa de datos (API)
-└── portfolio_repository/   # Capa de repositorio
+├── app_ui/                 # Design system and UI components
+├── portfolio_api/          # Data layer (API)
+└── portfolio_repository/   # Repository layer
 ```
 
 ---
 
 ## Running Tests 🧪
 
-### Ejecutar todos los tests
+### Run all tests
 
 ```sh
 flutter test
 ```
 
-### Con cobertura
+### With coverage
 
 ```sh
 flutter test --coverage
 ```
 
-### Ver reporte de cobertura
+### View coverage report
 
 ```sh
-# Generar reporte HTML
+# Generate HTML report
 genhtml coverage/lcov.info -o coverage/
 
-# Abrir reporte
+# Open report
 open coverage/index.html
 ```
 
 ---
 
-## Solución de Problemas 🔧
+## Troubleshooting 🔧
 
 ### Error: "CocoaPods not installed"
 
 ```sh
-# Instalar CocoaPods
+# Install CocoaPods
 sudo gem install cocoapods
 ```
 
-### Error: "Pods not found" o problemas con dependencias iOS/macOS
+### Error: "Pods not found" or iOS/macOS dependency issues
 
 ```sh
-# Limpiar y reinstalar pods
+# Clean and reinstall pods
 cd ios && pod deintegrate && pod install && cd ..
 cd macos && pod deintegrate && pod install && cd ..
 ```
 
-### Error: "build_runner" o archivos generados faltantes
+### Error: "build_runner" or missing generated files
 
 ```sh
 dart run build_runner build --delete-conflicting-outputs
 ```
 
-### Limpiar el proyecto completamente
+### Clean the project completely
 
 ```sh
 flutter clean
@@ -198,12 +198,12 @@ cd macos && pod install && cd ..
 
 ## Working with Translations 🌐
 
-Este proyecto usa [flutter_localizations][flutter_localizations_link] para internacionalización.
+This project uses [flutter_localizations][flutter_localizations_link] for internationalization.
 
-### Agregar nuevos strings
+### Adding new strings
 
-1. Abrir `lib/l10n/arb/app_en.arb`
-2. Agregar el nuevo key/value:
+1. Open `lib/l10n/arb/app_en.arb`
+2. Add the new key/value:
 
 ```arb
 {
@@ -215,13 +215,38 @@ Este proyecto usa [flutter_localizations][flutter_localizations_link] para inter
 }
 ```
 
-3. Agregar traducción en `lib/l10n/arb/app_es.arb`
+3. Add translation in `lib/l10n/arb/app_es.arb`
 
-4. Generar localizaciones:
+4. Generate localizations:
 
 ```sh
 flutter gen-l10n --arb-dir="lib/l10n/arb"
 ```
+
+---
+
+## Features ✨
+
+### Real-time Portfolio Tracking
+- Live updates every 10 seconds
+- Dynamic asset price changes
+- Real-time balance calculations
+
+### Interactive Chart
+- Sliding window of last 30 data points
+- Performance indicators (gain/loss %)
+- Date and value labels on axes
+- Interactive tooltips with detailed information
+- Color-coded based on performance (green for gains, red for losses)
+
+### Theme Support
+- Light theme (Retail Banking)
+- Dark theme (Neobank)
+- System theme support
+
+### Multi-language Support
+- English (en)
+- Spanish (es)
 
 ---
 
