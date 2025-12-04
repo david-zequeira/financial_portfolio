@@ -1,8 +1,10 @@
 import 'dart:async';
 import 'dart:math';
 
+import 'package:fixnum/fixnum.dart';
 import 'package:portfolio_api/src/data/mock_data.dart';
 import 'package:portfolio_api/src/generated/asset/asset.pb.dart';
+import 'package:portfolio_api/src/generated/history/history.pb.dart';
 import 'package:portfolio_api/src/generated/portfolio/portfolio.pb.dart';
 
 /// {@template portfolio_api_client}
@@ -37,7 +39,7 @@ class PortfolioApiClient {
     );
 
     var currentBalance = 125430.50;
-    // History is usually static in this short simulation, or appended to.
+    // History starts with 30 days of historical data
     final history = MockData.generateHistory();
 
     // Emit initial state
@@ -54,6 +56,9 @@ class PortfolioApiClient {
       // Simulate market movements
       currentAssets = _simulateMarketMovement(currentAssets);
       currentBalance = _calculateNewBalance(currentBalance);
+
+      // Add new history point with current balance
+      _addHistoryPoint(history, currentBalance);
 
       yield PortfolioResponse(
         totalBalance: currentBalance,
@@ -87,5 +92,23 @@ class PortfolioApiClient {
     // Simplified calculation: market trend +/- 0.1%
     final marketTrend = (_random.nextDouble() * 0.002) - 0.001;
     return currentBalance * (1 + marketTrend);
+  }
+
+  /// Adds a new history point and maintains a sliding window of recent data.
+  /// Keeps last 60 points to avoid infinite growth.
+  void _addHistoryPoint(List<HistoryPoint> history, double currentBalance) {
+    final now = DateTime.now();
+    final newPoint = HistoryPoint(
+      timestamp: Int64(now.millisecondsSinceEpoch ~/ 1000),
+      value: currentBalance,
+    );
+
+    history.add(newPoint);
+
+    // Keep only the last 60 points (sliding window)
+    // This ensures chart performance and shows relevant recent history
+    if (history.length > 60) {
+      history.removeAt(0);
+    }
   }
 }

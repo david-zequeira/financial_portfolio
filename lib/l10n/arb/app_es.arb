@@ -8,6 +8,9 @@
     "errorMessage": "Error: {error}",
     "noHistoryData": "No hay datos históricos disponibles",
     "chartPlaceholder": "Gráfico Próximamente",
+    "performanceGain": "+{percent}% ganancia",
+    "performanceLoss": "{percent}% pérdida",
+    "portfolioValue": "Valor del Portafolio",
     "themeSystem": "Sistema",
     "themeLight": "Banca Retail",
     "themeDark": "Neobanco"

@@ -18,6 +18,23 @@
     },
     "noHistoryData": "No history data available",
     "chartPlaceholder": "Chart Coming Soon",
+    "performanceGain": "+{percent}% gain",
+    "@performanceGain": {
+        "placeholders": {
+            "percent": {
+                "type": "String"
+            }
+        }
+    },
+    "performanceLoss": "{percent}% loss",
+    "@performanceLoss": {
+        "placeholders": {
+            "percent": {
+                "type": "String"
+            }
+        }
+    },
+    "portfolioValue": "Portfolio Value",
     "themeSystem": "System",
     "themeLight": "Retail",
     "themeDark": "Neobank"

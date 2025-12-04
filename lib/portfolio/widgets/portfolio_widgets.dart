@@ -1,3 +1,4 @@
+export 'chart/chart_widgets.dart';
 export 'portfolio_assets_list.dart';
 export 'portfolio_balance_card.dart';
 export 'portfolio_chart.dart';
