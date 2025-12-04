@@ -63,7 +63,7 @@ class AppTheme {
         primary: AppColors.neonPrimary,
         secondary: AppColors.neonSecondary,
         surface: AppColors.neonSurface,
-        error: AppColors.red, 
+        error: AppColors.red,
         onSecondary: AppColors.white,
         tertiary: AppColors.neonAccent,
       ),
@@ -71,10 +71,10 @@ class AppTheme {
       appBarTheme: AppBarTheme(
         backgroundColor: AppColors.neonBackground,
         elevation: 0,
-        centerTitle: true,
+        centerTitle: false,
         titleTextStyle: AppTypography.neobankTextTheme.headlineSmall?.copyWith(
           color: AppColors.neonPrimary,
-          letterSpacing: 2.0,
+          letterSpacing: 2,
         ),
         iconTheme: const IconThemeData(color: AppColors.neonPrimary),
       ),
@@ -86,7 +86,6 @@ class AppTheme {
           borderRadius: BorderRadius.circular(AppSpacing.md),
           side: BorderSide(
             color: AppColors.neonPrimary.withValues(alpha: 0.2),
-            width: 1,
           ),
         ),
         margin: EdgeInsets.zero,
@@ -110,4 +109,3 @@ class AppTheme {
     );
   }
 }
-
