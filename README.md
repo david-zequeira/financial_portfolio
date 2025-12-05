@@ -7,6 +7,20 @@
 Financial Portfolio App - An application to visualize and manage investment portfolios.
 
 ---
+## Screenshots 📸
+
+<table>
+  <tr>
+    <td><strong>Dark Theme (Neobank)</strong></td>
+    <td><strong>Light Theme (Retail Banking)</strong></td>
+  </tr>
+  <tr>
+    <td><img src="packages/app_ui/lib/src/assets/imgs/Xnapper-2025-12-05-18.24.36.png" alt="Dark Theme" width="300"></td>
+    <td><img src="packages/app_ui/lib/src/assets/imgs/Xnapper-2025-12-05-18.26.42.png" alt="Light Theme" width="300"></td>
+  </tr>
+</table>
+
+---
 
 ## Prerequisites 📋
 
@@ -183,20 +197,7 @@ flutter gen-l10n --arb-dir="lib/l10n/arb"
 
 ---
 
-## Screenshots 📸
 
-<table>
-  <tr>
-    <td><strong>Dark Theme (Neobank)</strong></td>
-    <td><strong>Light Theme (Retail Banking)</strong></td>
-  </tr>
-  <tr>
-    <td><img src="packages/app_ui/lib/src/assets/imgs/Xnapper-2025-12-05-18.24.36.png" alt="Dark Theme" width="300"></td>
-    <td><img src="packages/app_ui/lib/src/assets/imgs/Xnapper-2025-12-05-18.26.42.png" alt="Light Theme" width="300"></td>
-  </tr>
-</table>
-
----
 
 [coverage_badge]: coverage_badge.svg
 [flutter_localizations_link]: https://api.flutter.dev/flutter/flutter_localizations/flutter_localizations-library.html
