@@ -37,7 +37,7 @@ Widget buildMockApp(
           BlocProvider<PortfolioBloc>.value(value: portfolioBloc),
           BlocProvider<ThemeModeBloc>.value(value: themeModeBloc),
         ],
-        child: const PortfolioView(),
+        child: child,
       ),
     ),
   );

@@ -60,6 +60,13 @@ class ChartContainer extends StatelessWidget {
     );
   }
 
+  /// Calculates Y axis interval, ensuring it's never 0
+  double _getYInterval(({double minY, double maxY}) bounds) {
+    final interval =
+        (bounds.maxY - bounds.minY) / ChartConstants.gridDivisions;
+    return interval > 0 ? interval : 1;
+  }
+
   /// Builds grid configuration for the chart
   FlGridData _buildGridData(
     ThemeData theme,
@@ -67,8 +74,7 @@ class ChartContainer extends StatelessWidget {
   ) {
     return FlGridData(
       drawVerticalLine: false,
-      horizontalInterval:
-          (bounds.maxY - bounds.minY) / ChartConstants.gridDivisions,
+      horizontalInterval: _getYInterval(bounds),
       getDrawingHorizontalLine: (value) {
         return FlLine(
           color: theme.dividerColor.withValues(
@@ -102,7 +108,7 @@ class ChartContainer extends StatelessWidget {
         sideTitles: SideTitles(
           showTitles: true,
           reservedSize: 50,
-          interval: (bounds.maxY - bounds.minY) / ChartConstants.gridDivisions,
+          interval: _getYInterval(bounds),
           getTitlesWidget: (value, meta) => ChartValueLabel(
             value: value,
             theme: theme,

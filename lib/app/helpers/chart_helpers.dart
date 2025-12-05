@@ -75,8 +75,9 @@ class ChartHelpers {
 
   /// Gets intervals for X axis based on number of points.
   /// Returns appropriate spacing to avoid overcrowding labels.
+  /// Never returns 0 to avoid assertion errors in fl_chart.
   static double getXAxisInterval(List<HistoryPoint> history) {
-    if (history.isEmpty) return 1;
+    if (history.length < 2) return 1;
 
     final firstTimestamp =
         history.first.timestamp.millisecondsSinceEpoch / 1000;
@@ -84,7 +85,9 @@ class ChartHelpers {
     final range = lastTimestamp - firstTimestamp;
 
     // Calculate interval to show approximately 5-7 labels
-    return range / 6;
+    // Ensure interval is never 0
+    final interval = range / 6;
+    return interval > 0 ? interval : 1;
   }
 
   /// Returns the last N points from history for the sliding window effect

@@ -5,6 +5,9 @@ import 'package:portfolio_api/src/generated/history/history.pb.dart';
 
 /// Static mock data for the Portfolio API
 class MockData {
+  /// Initial portfolio balance
+  static const double initialBalance = 125430.50;
+
   /// List of assets in the portfolio
   static final List<Asset> assets = [
     Asset(

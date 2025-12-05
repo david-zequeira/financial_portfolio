@@ -1,27 +1,12 @@
-import 'package:financial_portfolio/l10n/l10n.dart';
 import 'package:financial_portfolio/portfolio/widgets/chart/chart_container.dart';
 import 'package:financial_portfolio/portfolio/widgets/chart/chart_performance_indicator.dart';
 import 'package:financial_portfolio/portfolio/widgets/portfolio_chart.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:portfolio_repository/portfolio_repository.dart';
 
-void main() {
-  Widget buildTestableWidget(Widget child) {
-    return MaterialApp(
-      localizationsDelegates: const [
-        AppLocalizations.delegate,
-        GlobalMaterialLocalizations.delegate,
-        GlobalWidgetsLocalizations.delegate,
-      ],
-      supportedLocales: AppLocalizations.supportedLocales,
-      home: Scaffold(
-        body: SingleChildScrollView(child: child),
-      ),
-    );
-  }
+import '../../helpers/helpers.dart';
 
+void main() {
   group('PortfolioChart', () {
     testWidgets('renders ChartContainer with history data', (tester) async {
       // Arrange
