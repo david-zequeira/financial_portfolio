@@ -149,51 +149,6 @@ flutter test
 flutter test --coverage
 ```
 
-### View coverage report
-
-```sh
-# Generate HTML report
-genhtml coverage/lcov.info -o coverage/
-
-# Open report
-open coverage/index.html
-```
-
----
-
-## Troubleshooting 🔧
-
-### Error: "CocoaPods not installed"
-
-```sh
-# Install CocoaPods
-sudo gem install cocoapods
-```
-
-### Error: "Pods not found" or iOS/macOS dependency issues
-
-```sh
-# Clean and reinstall pods
-cd ios && pod deintegrate && pod install && cd ..
-cd macos && pod deintegrate && pod install && cd ..
-```
-
-### Error: "build_runner" or missing generated files
-
-```sh
-dart run build_runner build --delete-conflicting-outputs
-```
-
-### Clean the project completely
-
-```sh
-flutter clean
-flutter pub get
-dart run build_runner build --delete-conflicting-outputs
-cd ios && pod install && cd ..
-cd macos && pod install && cd ..
-```
-
 ---
 
 ## Working with Translations 🌐
@@ -252,11 +207,16 @@ flutter gen-l10n --arb-dir="lib/l10n/arb"
 
 ## Screenshots 📸
 
-### Dark Theme (Neobank)
-![Dark Theme](packages/app_ui/lib/src/assets/imgs/Xnapper-2025-12-05-18.24.36.png)
-
-### Light Theme (Retail Banking)
-![Light Theme](packages/app_ui/lib/src/assets/imgs/Xnapper-2025-12-05-18.26.42.png)
+<table>
+  <tr>
+    <td><strong>Dark Theme (Neobank)</strong></td>
+    <td><strong>Light Theme (Retail Banking)</strong></td>
+  </tr>
+  <tr>
+    <td><img src="packages/app_ui/lib/src/assets/imgs/Xnapper-2025-12-05-18.24.36.png" alt="Dark Theme" width="300"></td>
+    <td><img src="packages/app_ui/lib/src/assets/imgs/Xnapper-2025-12-05-18.26.42.png" alt="Light Theme" width="300"></td>
+  </tr>
+</table>
 
 ---
 
