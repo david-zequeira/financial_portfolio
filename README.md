@@ -250,6 +250,16 @@ flutter gen-l10n --arb-dir="lib/l10n/arb"
 
 ---
 
+## Screenshots 📸
+
+### Dark Theme (Neobank)
+![Dark Theme](packages/app_ui/lib/src/assets/imgs/Xnapper-2025-12-05-18.24.36.png)
+
+### Light Theme (Retail Banking)
+![Light Theme](packages/app_ui/lib/src/assets/imgs/Xnapper-2025-12-05-18.26.42.png)
+
+---
+
 [coverage_badge]: coverage_badge.svg
 [flutter_localizations_link]: https://api.flutter.dev/flutter/flutter_localizations/flutter_localizations-library.html
 [license_badge]: https://img.shields.io/badge/license-MIT-blue.svg
