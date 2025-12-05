@@ -43,25 +43,6 @@ flutter pub get
 dart run build_runner build --delete-conflicting-outputs
 ```
 
-### 4. Platform-specific configuration
-
-#### iOS
-
-```sh
-cd ios
-pod install
-cd ..
-```
-
-#### macOS
-
-```sh
-cd macos
-pod install
-cd ..
-```
-
----
 
 ## Running the Application 🚀
 
@@ -94,9 +75,6 @@ flutter devices
 flutter run -d <device_id> --flavor development --target lib/main/main_development.dart
 ```
 
-### Using VSCode/Android Studio
-
-You can also use the pre-configured launch configurations in `.idea/runConfigurations/` or `.vscode/launch.json`.
 
 ---
 
