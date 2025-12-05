@@ -1,5 +1,5 @@
 import 'package:bloc_test/bloc_test.dart';
-import 'package:financial_portfolio/portfolio/bloc/portfolio_bloc.dart';
+import 'package:financial_portfolio/portfolio/portfolio.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 import 'package:portfolio_repository/portfolio_repository.dart';
@@ -45,7 +45,7 @@ void main() {
     );
 
     blocTest<PortfolioBloc, PortfolioState>(
-      'emits [loading, error] when getPortfolio emits error',
+      'emits [loading, error] when getPortfolio emits error ',
       setUp: () {
         when(() => portfolioRepository.getPortfolio()).thenAnswer(
           (_) => Stream.error(
